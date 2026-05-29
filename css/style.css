@@ -1,0 +1,95 @@
+body {
+  background-color: #dedede;
+  font-family: Arial, sans-serif;
+  box-sizing: content-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    padding-top: 10px;
+}
+
+a {
+  color: #000;
+  /*ext-decoration: none;*/
+  font-family: Arial, sans-serif;
+}
+
+p {
+  font-size: 1rem;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 98%;
+  justify-content: space-evenly;
+  row-gap: 10px;
+}
+
+.grid img {
+    width: 100%;
+    display: block;
+    border: 2px solid rgb(209, 203, 203);
+}
+
+figure {
+  background-color: #dedede;
+}
+
+figcaption {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  padding-top: 5px;
+}
+
+@media screen and (min-width: 772px) {
+  
+.grid{
+  grid-template-columns: 48% 48%;
+  align-items: center;
+}
+
+.grid img {
+  border-radius: 50%;
+}
+
+.grid figure:last-child {
+  grid-column: span 2;
+}
+
+}
+
+@media screen and (min-width: 992px) {
+  
+.grid img {
+  border-radius: 0;
+}
+
+.grid figure:nth-child(3n) {
+  grid-column: 1 / span 2;
+}
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+
+figcaption {
+  background-color: #121212;
+  color: white;
+}
+
+.grid img {
+  border: 2px solid rgb(15, 15, 15);
+}    
+
+}
